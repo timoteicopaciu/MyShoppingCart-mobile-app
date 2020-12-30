@@ -1,0 +1,9 @@
+My app is called "My Shopping Cart" and is designed to help people with the shoppings. 
+
+When opening the app, user see the shopping cart list, a list with all item added in the app. Just name, quantity and status are dispalyed.
+
+An user can add an item in the shopping cart to not forget to buy it. User can do that by pressing a button from the right-down corner of the screen with shopping cart list. The item has a name(ex. "Bread"), a quantity(ex. "1 buc" or "2 kg"), a 'shop to go' representing the shop name where the user cand find the item and a short description, where user can add extra information about that item. After the user write details about an item he can add it pressing the button "Add".
+
+Another feature, is to update an item. User can go to update it by selecting that item from the shopping cart list. Here user can modify details initial added about the product and can update the status of this item("To buy", "Bought", "Not found"). After the user update details about an item he can update it pressing the button "Update".
+
+Also, the app have the feature to delete an item. The user can delete this item by holding on the item. In order to be deleted, the user must to confirm this action, in order to avoid a mistake.
