@@ -38,9 +38,12 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _notifyUpdate(Item item) {
+    if (item == null)
+      return;
+    print(item);
     items.forEach((element) {
       if(element.id == item.id){
-       element = item;
+        element = item;
       }
     });
     setState(() {});
@@ -53,14 +56,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _navigateToAdd() async {
     final id = await Navigator.push(context,
-            MaterialPageRoute(builder: (context) => AddItemPage(db)))
+        MaterialPageRoute(builder: (context) => AddItemPage(db)))
         .then((data) => _notifyAdd(data));
   }
 
   void _navigateToUpdate(Item item) async {
     final id = await Navigator.push(context,
         MaterialPageRoute(builder: (context) => UpdateItemPage(item, db)))
-        .then((item) => _notifyUpdate(item));
+        .then((updatedItem) => _notifyUpdate(updatedItem));
   }
 
   @override
@@ -108,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 textScaleFactor: 1.2,
                               ),
                             ],
-                      )),
+                          )),
                     ),
                     onTap: () => _navigateToUpdate(items[index]),
                     onLongPress: () => showDialog(
